@@ -1,0 +1,77 @@
+body,
+.calculator {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.calculator {
+  width: 300px;
+  background-color: #fbccd3;
+  border: 2px solid #fffada;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  font-size: 2rem;
+  border: 1px solid #fffada;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.button:hover,
+.operator:hover {
+  background-color: #fff9cf;
+  border-color: #c0c0c0;
+}
+
+.row {
+  display: flex;
+  gap: 5px;
+}
+
+/* Choosen operator will get a brighter appearance */
+.operator.clicked {
+  background-color: #fff5b5;
+}
+
+/* Click effect */
+.pressed {
+  transform: scale(0.95); /* Scale down the button slightly on click */
+  transition: transform 0.1s ease; /* Smooth transition effect for the transform property */
+}
+
+.operator,
+.button {
+  flex: 1;
+  font-size: 2rem;
+  padding: 10px;
+  border: 1px solid #fffada;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease; /* Smooth transition effect for all properties */
+}
+
+.zero {
+  flex-basis: calc(100% / 3 - 25px); /* One third minus the gap */
+}
